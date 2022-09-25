@@ -28,25 +28,3 @@ Eine Anleitung aus den Erfahrungen aus 12/2020 ausgeführt mit Linux:
 Der Konfigurationsmodus der FB 4040 wir wie folgt erreicht: Im normalen Betrieb die WPS-Taste drücken; nach ca. 10-15 Sekunden (Sobald einmal alle Lampen aufleuchten loslassen ) daraufhin erfolgt ein Reset des Routers und ein neustart im Konfigurationsmodus.
 
 Der Router darf dabei nicht vom Strom getrennt werden.
-Informationsquellen Firmwareinstallation/Fritzbox 4040
-
-Original von https://wiki.freifunk-franken.de/w/Firmwareinstallation/Fritzbox_4040
-
-Freifunk Darmstadt hat eine gute Anleitung für Linux, Windows, MacOS veröffentlicht: https://fritz-tools.readthedocs.io/de/latest/
-
-## Windows:
-
-Für Windows gibt es eine Powershell Anwendung: https://github.com/adrianschmutzler/evaFFF
-Auch Interessant: Wichtige Infos:
-
-    Bei der Fritzbox 4040 sind alle vier gelben Ports entweder Mesh oder Client, denn diese hängen alle intern an einem Hardware-Switch und werden nicht als VLAN an den Switch angebunden, somit sind die Ports nicht aufteilbar. Dies ist vermutlich auch in Zukunft nicht möglich.
-            eth0 - gelbe Buchsen - Standard ist Mesh, kann zu Client umgeschaltet werden
-            eth1 - blaue Buchse - Uplink/VPN
-
-    Installation geht nicht, probiert mal die aktuellste FW 4.1.0er. Die sollte eigentlich gehen. Falls die nicht klappt, musst du ganz auf die 4.0.1er zurück und dann mit sysupgrade auf 4.1.0 aktualisieren. Achtung: Die 4.0.3er ist kaputt, was das Bootloader-Image für die 4040 angeht.
-
-    Das Flashen der FB 4040 mit der Anleitung unter https://fritz-tools.readthedocs.io/de/latest/ und der aktuellen Firmware sollte auch problemlos funktionieren.
-
-    je nach Tageszeit liegt der Upload bei 20-25 MBit/s (ziemlich unabhängig davon, ob Mesh-VPN-Verschlüsselung aktiviert ist)
-
-    Stromverbrauch ist laut seiner Messung erfreulich niedrig: ca. 2,5 Watt
